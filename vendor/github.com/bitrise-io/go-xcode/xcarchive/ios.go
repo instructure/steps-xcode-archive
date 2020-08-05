@@ -334,7 +334,7 @@ func (archive IosArchive) FindDSYMs() (string, []string, error) {
 		return "", []string{}, err
 	}
 
-	fmt.Printf("dsyms: %s\n", string.Join(dsyms, ", "))
+	fmt.Printf("dsyms: %s\n", strings.Join(dsyms, ", "))
 
 	appDSYM := ""
 	frameworkDSYMs := []string{}

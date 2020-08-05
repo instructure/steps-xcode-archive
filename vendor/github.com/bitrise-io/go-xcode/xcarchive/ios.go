@@ -334,6 +334,8 @@ func (archive IosArchive) FindDSYMs() (string, []string, error) {
 		return "", []string{}, err
 	}
 
+	fmt.Printf("dsyms: %s\n", string.Join(dsyms, ", "))
+
 	appDSYM := ""
 	frameworkDSYMs := []string{}
 	for _, dsym := range dsyms {
@@ -343,6 +345,8 @@ func (archive IosArchive) FindDSYMs() (string, []string, error) {
 			frameworkDSYMs = append(frameworkDSYMs, dsym)
 		}
 	}
+
+	fmt.Printf("appDSYM: %s\n", appDSYM)
 
 	return appDSYM, frameworkDSYMs, nil
 }

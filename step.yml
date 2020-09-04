@@ -40,9 +40,9 @@ description: |-
    - [iOS Auto Provision](https://www.bitrise.io/integrations/steps/ios-auto-provision)
    - [Deploy to iTunesConnect](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver)
 
-website: https://github.com/bitrise-steplib/steps-xcode-archive
-source_code_url: https://github.com/bitrise-steplib/steps-xcode-archive
-support_url: https://github.com/bitrise-steplib/steps-xcode-archive/issues
+website: https://github.com/instructure/steps-xcode-archive
+source_code_url: https://github.com/instructure/steps-xcode-archive
+support_url: https://github.com/instructure/steps-xcode-archive/issues
 project_type_tags:
   - ios
   - react-native
@@ -57,7 +57,7 @@ deps:
   - name: xcode
 toolkit:
   go:
-    package_name: github.com/bitrise-steplib/steps-xcode-archive
+    package_name: github.com/instructure/steps-xcode-archive
 inputs:
   - project_path: $BITRISE_PROJECT_PATH
     opts:
@@ -176,6 +176,11 @@ inputs:
       - "none"
       - "swift_packages"
       is_required: true
+  - existing_archive_path:
+    opts:
+      title: "Existing archive path"
+      description: |-
+        Specifies which archive to export from. If unset, `xcodebuild archive` will be run.
   - force_team_id:
     opts:
       category: Force Build Settings

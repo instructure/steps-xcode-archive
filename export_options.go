@@ -14,7 +14,7 @@ import (
 	"github.com/bitrise-io/xcode-project/serialized"
 	"github.com/bitrise-io/xcode-project/xcodeproj"
 	"github.com/bitrise-io/xcode-project/xcscheme"
-	"github.com/bitrise-steplib/steps-xcode-archive/utils"
+	"github.com/instructure/steps-xcode-archive/utils"
 )
 
 const appClipProductType = "com.apple.product-type.application.on-demand-install-capable"
